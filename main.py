@@ -147,24 +147,27 @@ def guessthenumber():
 			else:
 				continue		
 		print(f"Wins: {wins}\nLoses: {loses}\n")
-	return wins, loses""
-	print("complete")
+		break
+	return wins, loses
 
-guessthenumber()	
+
+
+#guessthenumber()
 totalwins=0
 totalloses=0
-#while True:
-#	print("What game do you want to play? \n")
-#	print("(Rockpaperscissors = rps)")
-#	gamechoose=input(":")
-#	if gamechoose.lower() in ("rockpaperscissors","rps"):
-#		wins, loses = rockpaperscissors()
-#	elif gamechoose.lower() in ("mastermind","mm")
-#		wins, loses = 	mastermind()
-#	else:
-#		print(f"You had {totalwins} Wins, and {totalloses} Loses.\n")
-#		print("Later!")
-#		break
-#	totalwins += wins
-#	totalloses += loses
-#	continue
+while True:
+	#Need to have a catch for if they don't input anything into the gamechoose
+	print("What game do you want to play? \n")
+	print("(Rockpaperscissors = rps) (Guessthenumber = gtn) ")
+	gamechoose=input(":")
+	if gamechoose.lower() in ("rockpaperscissors","rps"):
+		wins, loses = rockpaperscissors()
+	elif gamechoose.lower() in ("guessthenumber","gtn"):
+		wins, loses = 	guessthenumber()
+	else:
+		print(f"You had {totalwins} Wins, and {totalloses} Loses.\n")
+		print("Later!")
+		break
+	totalwins += wins
+	totalloses += loses
+	continue
